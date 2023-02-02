@@ -1,0 +1,17 @@
+.nav {
+	height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.nav .links {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+
+.nav .logo {
+	font-size: 1.2rem;
+}
