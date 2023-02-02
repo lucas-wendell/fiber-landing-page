@@ -1,5 +1,6 @@
+import { NavButtonContainer } from '../../components/NavButtonContainer';
 import './style.css';
 
 export const Home = () => {
-	return <h1>Ola mundo</h1>;
+	return <NavButtonContainer />;
 };
