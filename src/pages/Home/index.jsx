@@ -1,6 +1,6 @@
-import { NavButtonContainer } from '../../components/NavButtonContainer';
+import { Nav } from '../../components/Nav';
 import './style.css';
 
 export const Home = () => {
-	return <NavButtonContainer />;
+	return <Nav />;
 };
