@@ -1,6 +1,6 @@
-import { Nav } from '../../components/Nav';
+import { DescriptionSection } from '../../components/DescriptionSection';
 import './style.css';
 
 export const Home = () => {
-	return <Nav />;
+	return <DescriptionSection />;
 };

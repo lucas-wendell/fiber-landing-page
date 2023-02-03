@@ -1,0 +1,42 @@
+.descriptionText {
+	width: 60%;
+}
+
+.descriptionText .rateDiv {
+	gap: 15px;
+	display: flex;
+	align-items: center;
+}
+
+.descriptionText .rateDiv .stars {
+	gap: 5px;
+	display: flex;
+}
+
+.descriptionText .textDiv h1 {
+	margin: 15px 0;
+	font-size: 3.5rem;
+}
+
+.descriptionText .textDiv .buttonDiv {
+	gap: 25px;
+	display: flex;
+	margin: 20px 0;
+	align-items: center;
+}
+
+.descriptionText .textDiv .buttonDiv p {
+	color: #4e13d1;
+	font-weight: 700;
+	border-bottom: 1px solid #4e13d1;
+}
+
+.descriptionText .textDiv .resume {
+	font-size: 1.5rem;
+}
+
+.descriptionText .textDiv .benefitsDiv {
+	gap: 15px;
+	display: flex;
+	align-items: center;
+}

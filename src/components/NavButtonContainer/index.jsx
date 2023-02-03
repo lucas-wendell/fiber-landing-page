@@ -1,12 +1,12 @@
 import React from 'react';
-import { NavButton } from '../NavButton';
+import { Button } from '../Button';
 import './style.css';
 
 export const NavButtonContainer = () => {
 	return (
 		<div className="navButtonContainer">
-			<NavButton state={'secondary'}>Sign In</NavButton>
-			<NavButton state={'primary'}>Sign Up</NavButton>
+			<Button state={'secondary'}>Sign In</Button>
+			<Button state={'primary'}>Sign Up</Button>
 		</div>
 	);
 };
