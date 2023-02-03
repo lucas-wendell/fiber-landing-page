@@ -1,0 +1,9 @@
+.description {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.description img {
+	max-width: 600px;
+}

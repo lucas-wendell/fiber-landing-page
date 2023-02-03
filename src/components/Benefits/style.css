@@ -1,0 +1,10 @@
+.benefits {
+	gap: 5px;
+	display: flex;
+	align-items: center;
+}
+
+.benefits img {
+	width: 20px;
+	height: 20px;
+}
