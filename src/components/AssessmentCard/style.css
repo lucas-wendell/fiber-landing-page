@@ -1,0 +1,29 @@
+.assessmentCard {
+	gap: 30px;
+	display: flex;
+	padding: 20px;
+	border-radius: 5px;
+	flex-direction: column;
+	border: 1px solid #ddd;
+}
+
+.assessmentCard .textDiv .avatarDiv {
+	gap: 15px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 15px;
+}
+
+.assessmentCard .textDiv .avatarDiv img {
+	width: 50px;
+	height: 50px;
+}
+
+.assessmentCard .textDiv .avatarDiv .clientInfo .nameParagraph {
+	color: #4d13d1;
+	font-weight: 700;
+}
+
+.assessmentCard .textDiv .avatarDiv .clientInfo .revenueParagraph {
+	font-size: 0.9rem;
+}

@@ -1,6 +1,7 @@
 import './style.css';
+import { Button } from '../Button';
 
-export const AssessmentCard = ({ name, revenue, text, avatar }) => {
+export const AssessmentCard = ({ name, firstName, revenue, text, avatar }) => {
 	return (
 		<div className="assessmentCard">
 			<div className="textDiv">
@@ -13,7 +14,9 @@ export const AssessmentCard = ({ name, revenue, text, avatar }) => {
 				</div>
 				<p className="text">{text}</p>
 			</div>
-			<button>teste</button>
+			<Button state="quaternary" width={'100%'}>
+				View {firstName}'s Portifolio
+			</Button>
 		</div>
 	);
 };

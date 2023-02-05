@@ -1,5 +1,5 @@
-import checkMark from '../../assets/Checkmark.svg';
 import './style.css';
+import checkMark from '../../assets/Checkmark.svg';
 
 export const Benefits = ({ children }) => {
 	return (

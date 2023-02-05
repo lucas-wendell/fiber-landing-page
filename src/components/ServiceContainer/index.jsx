@@ -1,11 +1,10 @@
 import './style.css';
-
 import { useState } from 'react';
-import clock from '../../assets/time.svg';
+import { Service } from '../ServiceComponent';
 
+import clock from '../../assets/time.svg';
 import code from '../../assets/code.svg';
 import sizesIcon from '../../assets/allSizes.svg';
-import { Service } from '../ServiceComponent';
 
 export const ServiceContainer = () => {
 	const [services] = useState([

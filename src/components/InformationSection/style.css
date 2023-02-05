@@ -1,3 +1,6 @@
 .informationSection {
-	padding: 0 7% 5% 7%;
+	gap: 100px;
+	display: flex;
+	padding: 3% 7% 5% 7%;
+	flex-direction: column;
 }
