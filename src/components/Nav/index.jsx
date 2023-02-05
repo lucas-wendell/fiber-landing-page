@@ -1,6 +1,6 @@
-import React from 'react';
-import { NavButtonContainer } from '../NavButtonContainer';
 import './style.css';
+import { NavButtonContainer } from '../NavButtonContainer';
+
 export const Nav = () => {
 	return (
 		<nav className="nav">

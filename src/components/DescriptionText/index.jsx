@@ -1,8 +1,8 @@
-import React from 'react';
+import './style.css';
+
 import star from '../../assets/star.svg';
 import { Benefits } from '../Benefits';
 import { Button } from '../Button';
-import './style.css';
 
 export const DescriptionText = () => {
 	return (
