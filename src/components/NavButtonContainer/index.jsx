@@ -1,6 +1,5 @@
-import React from 'react';
-import { Button } from '../Button';
 import './style.css';
+import { Button } from '../Button';
 
 export const NavButtonContainer = () => {
 	return (

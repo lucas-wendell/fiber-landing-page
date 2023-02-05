@@ -1,8 +1,6 @@
-import React from 'react';
-import { DescriptionText } from '../DescriptionText';
-
-import illustration from '../../assets/hero-illustration.png';
 import './style.css';
+import { DescriptionText } from '../DescriptionText';
+import illustration from '../../assets/hero-illustration.png';
 
 export const Description = () => {
 	return (

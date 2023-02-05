@@ -1,0 +1,21 @@
+.service {
+	gap: 5px;
+	display: flex;
+	flex-direction: column;
+}
+
+.service img {
+	width: 40px;
+	height: 40px;
+}
+
+.service .serviceDescription {
+	gap: 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+.service .serviceDescription .shortDescription {
+	font-weight: 700;
+	font-size: 1.2rem;
+}
