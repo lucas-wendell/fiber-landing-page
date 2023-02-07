@@ -1,0 +1,33 @@
+.footer {
+	min-height: 200px;
+	padding: 5% 7% 5% 7%;
+	background-color: #f5f5f5;
+}
+
+.footer .content {
+	gap: 50px;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	align-items: flex-start;
+}
+
+.footer .linksContainer {
+	gap: 50px;
+	display: flex;
+	align-items: flex-start;
+}
+
+.footer .fiberDescription {
+	width: 30%;
+}
+
+.footer .fiberDescription .textDiv h5 {
+	font-size: 1.2rem;
+	margin-bottom: 15px;
+}
+
+.footer .fiberDescription .createdBy {
+	margin-top: 20px;
+}
