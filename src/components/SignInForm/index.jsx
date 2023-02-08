@@ -7,7 +7,7 @@ export const SignInForm = () => {
 	const onSubmit = data => console.log(data);
 
 	return (
-		<form onSubmit={handleSubmit(onSubmit)}>
+		<form className="form" onSubmit={handleSubmit(onSubmit)}>
 			<label>
 				E-mail
 				<input
@@ -35,10 +35,12 @@ export const SignInForm = () => {
 				<a href="">Terms & Conditions</a>.
 			</label>
 
-			<button>Create Fiber Account</button>
-			<p>
-				Don't have an account?<Link to="/signUp">Sign up</Link>
-			</p>
+			<div className="buttonDiv">
+				<button>Create Fiber Account</button>
+				<p>
+					Don't have an account?<Link to="/signUp">Sign up</Link>
+				</p>
+			</div>
 		</form>
 	);
 };
