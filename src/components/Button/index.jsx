@@ -1,6 +1,6 @@
 import './style.css';
 
-export const Button = ({ state, width, children }) => {
+export const Button = ({ state = 'primary', width, children }) => {
 	const stylesOptions = {
 		primary: { color: '#fff', backgroundColor: '#4e13d1' },
 		secondary: { color: '#0c0b07', backgroundColor: 'transparent' },

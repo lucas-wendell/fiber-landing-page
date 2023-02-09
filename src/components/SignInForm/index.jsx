@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import './style.css';
+import { Button } from '../Button';
 
 export const SignInForm = () => {
 	const { register, handleSubmit } = useForm();
@@ -24,21 +25,12 @@ export const SignInForm = () => {
 					{...register('password', { required: true, minLength: 3 })}
 				/>
 			</label>
-			<input
-				type="checkbox"
-				name="terms"
-				id="terms"
-				{...register('terms', { required: true })}
-			/>
-			<label htmlFor="terms">
-				By creating an account on Fiber, you agree to the{' '}
-				<a href="">Terms & Conditions</a>.
-			</label>
 
 			<div className="buttonDiv">
-				<button>Create Fiber Account</button>
-				<p>
-					Don't have an account?<Link to="/signUp">Sign up</Link>
+				<Button width={'100%'}>Enter your account</Button>
+				<p className="link">
+					<span>Don't have an account?</span>
+					<Link to="/signUp">Sign up</Link>
 				</p>
 			</div>
 		</form>

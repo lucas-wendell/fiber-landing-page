@@ -7,7 +7,7 @@ export const SignIn = () => {
 		<main className="main">
 			<section className="formSection">
 				<div className="textDiv">
-					<h2>Fiber</h2>
+					<h4>Fiber</h4>
 					<h2>Enter your account</h2>
 				</div>
 				<SignInForm />
