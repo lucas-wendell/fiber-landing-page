@@ -1,11 +1,20 @@
-import { Link } from 'react-router-dom';
-import { useForm } from 'react-hook-form';
 import './style.css';
+import { Link } from 'react-router-dom';
+
 import { Button } from '../Button';
+import { useForm } from 'react-hook-form';
 
 export const SignInForm = () => {
-	const { register, handleSubmit } = useForm();
-	const onSubmit = data => console.log(data);
+	const {
+		register,
+		formState: { errors },
+		handleSubmit,
+	} = useForm();
+
+	const onSubmit = data => {
+		console.log(errors);
+		console.log(data);
+	};
 
 	return (
 		<form className="form" onSubmit={handleSubmit(onSubmit)}>
@@ -14,7 +23,9 @@ export const SignInForm = () => {
 				<input
 					type="email"
 					placeholder="john@example.com"
-					{...register('email')}
+					{...register('email', {
+						required: 'This field is required! Please, insert a value',
+					})}
 				/>
 			</label>
 			<label>
@@ -22,7 +33,13 @@ export const SignInForm = () => {
 				<input
 					type="password"
 					placeholder="At least 8 characters"
-					{...register('password', { required: true, minLength: 3 })}
+					{...register('password', {
+						required: 'This field is required! Please, insert a value',
+						minLength: {
+							value: 3,
+							message: 'Your password must be more than 3 characters',
+						},
+					})}
 				/>
 			</label>
 
