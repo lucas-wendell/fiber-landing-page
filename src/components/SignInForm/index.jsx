@@ -12,7 +12,6 @@ export const SignInForm = () => {
 	} = useForm();
 
 	const onSubmit = data => {
-		console.log(errors);
 		console.log(data);
 	};
 
@@ -22,25 +21,37 @@ export const SignInForm = () => {
 				E-mail
 				<input
 					type="email"
+					error={errors.email ? 'true' : 'false'}
 					placeholder="john@example.com"
 					{...register('email', {
-						required: 'This field is required! Please, insert a value',
+						required: 'Required',
+						pattern: {
+							value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
+							message: 'Entered value does not match email format',
+						},
 					})}
 				/>
+				{errors.email && (
+					<span className="errorMessage">{errors.email.message}</span>
+				)}
 			</label>
 			<label>
 				Password
 				<input
+					error={errors.password ? 'true' : 'false'}
 					type="password"
 					placeholder="At least 8 characters"
 					{...register('password', {
-						required: 'This field is required! Please, insert a value',
+						required: 'Required',
 						minLength: {
 							value: 3,
 							message: 'Your password must be more than 3 characters',
 						},
 					})}
 				/>
+				{errors.password && (
+					<span className="errorMessage">{errors.password.message}</span>
+				)}
 			</label>
 
 			<div className="buttonDiv">
