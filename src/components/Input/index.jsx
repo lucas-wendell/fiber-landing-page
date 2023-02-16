@@ -1,8 +1,11 @@
+import './style.css';
+
 export const Input = ({ labelText, type, placeholder, register, error }) => {
 	return (
-		<label>
+		<label className="label">
 			{labelText}
 			<input
+				className="input"
 				error={error ? 'true' : 'false'}
 				type={type}
 				{...register}

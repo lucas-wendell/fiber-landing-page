@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { Button } from '../Button';
 import { useForm } from 'react-hook-form';
+import { Input } from '../../components/Input';
 
 export const SignUpForm = () => {
 	const {
@@ -17,60 +18,46 @@ export const SignUpForm = () => {
 
 	return (
 		<form className="SignUpForm" onSubmit={handleSubmit(onSubmit)}>
-			<label>
-				Your Name
-				<input
-					error={errors.name ? 'true' : 'false'}
-					type="text"
-					placeholder="John Doe"
-					{...register('name', {
-						required: 'Required',
-						minLength: {
-							value: 3,
-							message: 'Your name must be more than 3 characters',
-						},
-					})}
-				/>
-				{errors.name && (
-					<span className="errorMessage">{errors.name.message}</span>
-				)}
-			</label>
-			<label>
-				E-mail
-				<input
-					type="email"
-					error={errors.email ? 'true' : 'false'}
-					placeholder="john@example.com"
-					{...register('email', {
-						required: 'Required',
-						pattern: {
-							value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
-							message: 'Entered value does not match email format',
-						},
-					})}
-				/>
-				{errors.email && (
-					<span className="errorMessage">{errors.email.message}</span>
-				)}
-			</label>
-			<label>
-				Password
-				<input
-					error={errors.password ? 'true' : 'false'}
-					type="password"
-					placeholder="At least 8 characters"
-					{...register('password', {
-						required: 'Required',
-						minLength: {
-							value: 3,
-							message: 'Your password must be more than 3 characters',
-						},
-					})}
-				/>
-				{errors.password && (
-					<span className="errorMessage">{errors.password.message}</span>
-				)}
-			</label>
+			<Input
+				labelText="Your Name"
+				type="text"
+				placeholder="John Doe"
+				register={register('name', {
+					required: 'Required',
+					minLength: {
+						value: 3,
+						message: 'Your name must be more than 3 characters',
+					},
+				})}
+				error={errors.name}
+			/>
+			<Input
+				labelText="E-mail"
+				type="email"
+				placeholder="john@example.com"
+				register={register('email', {
+					required: 'Required',
+					pattern: {
+						value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
+						message: 'Entered value does not match email format',
+					},
+				})}
+				error={errors.email}
+			/>
+			<Input
+				labelText="Password"
+				type="password"
+				placeholder="At least 8 characters"
+				register={register('password', {
+					required: 'Required',
+					minLength: {
+						value: 3,
+						message: 'Your password must be more than 3 characters',
+					},
+				})}
+				error={errors.password}
+			/>
+
 			<label>
 				<p>
 					By Creating an account on Fiber, you agree to the{' '}
