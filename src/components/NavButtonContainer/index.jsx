@@ -8,7 +8,7 @@ export const NavButtonContainer = () => {
 			<Link to="/signIn">
 				<Button state={'secondary'}>Sign In</Button>
 			</Link>
-			<Link to="/signIn">
+			<Link to="/signUp">
 				<Button state={'primary'}>Sign Up</Button>
 			</Link>
 		</div>
