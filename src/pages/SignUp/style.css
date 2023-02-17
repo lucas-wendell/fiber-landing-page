@@ -1,0 +1,52 @@
+.SignUpMain {
+	display: flex;
+	height: 100vh;
+	align-items: center;
+	/* justify-content: space-between; */
+}
+
+.SignUpFormSection {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	height: 100vh;
+	padding: 100px;
+	width: 60%;
+}
+
+.SignUpFormSection .textDiv h2 {
+	font-size: 3rem;
+	margin: 30px 0;
+}
+
+.SignUpMain .carroselSection {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 20px;
+	width: 40%;
+	background-color: #4d13d1;
+	height: 100vh;
+}
+
+.SignUpMain .carroselSection img {
+	max-width: 400px;
+}
+
+.SignUpMain .carroselSection .textDiv {
+	display: flex;
+	gap: 5px;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	color: #fff;
+	width: 70%;
+	font-size: 1.5rem;
+}
+
+.SignUpMain .carroselSection .textDiv p {
+	text-align: center;
+	color: #ddd;
+	font-size: 1rem;
+}
