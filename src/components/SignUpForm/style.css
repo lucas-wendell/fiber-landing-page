@@ -16,3 +16,21 @@
 	align-items: center;
 	gap: 5px;
 }
+
+.SignUpForm .labelCheckbox {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 20px;
+}
+
+.SignUpForm .labelCheckbox input {
+	width: 20px;
+	height: 20px;
+}
+
+.SignUpForm .labelCheckbox p > span {
+	color: #4d13d1;
+	font-weight: 700;
+	text-decoration: solid 1px #4d13d1;
+}

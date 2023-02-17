@@ -14,6 +14,7 @@ export const SignUpForm = () => {
 
 	const onSubmit = data => {
 		console.log(data);
+		console.log('ola');
 	};
 
 	return (
@@ -39,7 +40,8 @@ export const SignUpForm = () => {
 					required: 'Required',
 					pattern: {
 						value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
-						message: 'Entered value does not match email format',
+						message:
+							'Entered value does not match email format, enter a valid email address.',
 					},
 				})}
 				error={errors.email}
@@ -58,17 +60,17 @@ export const SignUpForm = () => {
 				error={errors.password}
 			/>
 
-			<label>
-				<p>
-					By Creating an account on Fiber, you agree to the{' '}
-					<span>Terms & Conditions</span>.
-				</p>
+			<label className="labelCheckbox">
 				<input
 					type="checkbox"
 					{...register('checkbox', {
 						required: 'Required',
 					})}
 				/>
+				<p>
+					By Creating an account on Fiber, you agree to the{' '}
+					<span>Terms & Conditions</span>.
+				</p>
 			</label>
 
 			<div className="buttonDiv">
