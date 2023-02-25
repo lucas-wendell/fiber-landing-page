@@ -3,7 +3,11 @@ import { Link } from 'react-router-dom';
 
 import { Button } from '../Button';
 import { useForm } from 'react-hook-form';
+
 import { Input } from '../../components/Input';
+import { useContext } from 'react';
+
+import { GlobalContext } from '../../context';
 
 export const SignUpForm = () => {
 	const {
@@ -11,10 +15,14 @@ export const SignUpForm = () => {
 		formState: { errors },
 		handleSubmit,
 	} = useForm();
+	const { createUser, users } = useContext(GlobalContext);
 
 	const onSubmit = data => {
-		console.log(data);
-		console.log('ola');
+		delete data.checkbox;
+		const emailIsInvalid = users.some(({ email }) => email === data.email);
+
+		if (emailIsInvalid) throw new Error('Email already exists');
+		createUser(data);
 	};
 
 	return (

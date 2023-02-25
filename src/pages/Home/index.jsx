@@ -5,16 +5,17 @@ import { DescriptionSection } from '../../components/DescriptionSection';
 import { Footer } from '../../components/Footer';
 
 import { InformationSection } from '../../components/InformationSection';
-import { GlobalContext } from '../../context';
+import { GlobalContext, Provider } from '../../context';
 
 export const Home = () => {
 	const [contextState, setContextState] = useState();
-	const globalContext = useContext(GlobalContext);
+	/* const globalContext = useContext(GlobalContext);
 
 	const handleSetUser = () => {
-		globalContext.forEach(user => {
-			localStorage.setItem(user.id, JSON.stringify(user));
-		});
+		// globalContext.forEach(user => {
+		// 	localStorage.setItem(user.email, JSON.stringify(user));
+		// });
+		setContextState({state})
 	};
 
 	useEffect(() => {
@@ -23,15 +24,15 @@ export const Home = () => {
 
 	useEffect(() => {
 		handleSetUser();
-	}, [contextState]);
+	}, [contextState]); */
 
 	return (
 		<>
-			<GlobalContext.Provider value={{ contextState, setContextState }}>
-				<DescriptionSection />;
-				<InformationSection />
-				<Footer />
-			</GlobalContext.Provider>
+			{/* <GlobalContext.Provider value={{ contextState, setContextState }}> */}
+			<DescriptionSection />;
+			<InformationSection />
+			<Footer />
+			{/* </GlobalContext.Provider> */}
 		</>
 	);
 };
