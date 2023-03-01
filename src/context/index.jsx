@@ -10,7 +10,7 @@ const initialState = {
 			password: 'teste123',
 		},
 	],
-	userLog: null,
+	userL: null,
 };
 
 export const GlobalContext = createContext();
