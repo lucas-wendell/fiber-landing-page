@@ -1,7 +1,11 @@
 import './style.css';
 import { NavButtonContainer } from '../NavButtonContainer';
+import { useContext } from 'react';
+import { GlobalContext } from '../../context';
 
 export const Nav = () => {
+	const { userLog } = useContext(GlobalContext);
+
 	return (
 		<nav className="nav">
 			<h6 className="logo">Fiber</h6>
@@ -10,7 +14,7 @@ export const Nav = () => {
 				<li>Pricing</li>
 				<li>Features</li>
 			</ul>
-			<NavButtonContainer />
+			{userLog ? <p>Ola, {userLog.name}!</p> : <NavButtonContainer />}
 		</nav>
 	);
 };
