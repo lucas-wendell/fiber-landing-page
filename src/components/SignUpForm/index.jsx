@@ -10,12 +10,14 @@ import { useContext, useState } from 'react';
 import { GlobalContext } from '../../context';
 import { Modal } from '../Modal';
 
+import { useNavigate } from 'react-router-dom';
 export const SignUpForm = () => {
 	const {
 		register,
 		formState: { errors },
 		handleSubmit,
 	} = useForm();
+	const navigate = useNavigate();
 
 	const { createUser, users } = useContext(GlobalContext);
 	const [erroModal, setErroModal] = useState({
@@ -28,7 +30,6 @@ export const SignUpForm = () => {
 		const emailIsInvalid = users.some(({ email }) => email === data.email);
 
 		if (emailIsInvalid) {
-			console.log('entrou aqui');
 			setErroModal({
 				erro: true,
 				message: 'Email already exists',
@@ -36,6 +37,7 @@ export const SignUpForm = () => {
 			return;
 		}
 		createUser(data);
+		navigate('/');
 	};
 
 	return (
