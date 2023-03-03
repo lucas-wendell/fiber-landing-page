@@ -13,8 +13,19 @@ export const reducer = (state, action) => {
 				userLog: userToBeLogged,
 			};
 		}
-		case action.LOG_IN:
-			break;
+		case actions.LOG_IN: {
+			const newUser = [...state.users, action.payload];
+			const [userToBeLogged] = newUser.filter(
+				user =>
+					user.email === action.payload.email &&
+					user.password === action.payload.password,
+			);
+
+			return {
+				users: state.users,
+				userLog: userToBeLogged,
+			};
+		}
 		default: {
 			console.log('default');
 			return state;

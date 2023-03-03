@@ -23,6 +23,9 @@ export const Provider = ({ children }) => {
 		createUser: userInfo => {
 			dispatch({ type: actions.CREATE_USER, payload: userInfo });
 		},
+		logIn: userInfo => {
+			dispatch({ type: actions.LOG_IN, payload: userInfo });
+		},
 	};
 
 	return (
