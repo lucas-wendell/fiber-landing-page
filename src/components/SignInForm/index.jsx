@@ -1,9 +1,11 @@
 import './style.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import { Button } from '../Button';
 import { useForm } from 'react-hook-form';
 import { Input } from '../Input';
+import { GlobalContext } from '../../context';
+import { useContext } from 'react';
 
 export const SignInForm = () => {
 	const {
@@ -11,9 +13,12 @@ export const SignInForm = () => {
 		formState: { errors },
 		handleSubmit,
 	} = useForm();
+	const navigate = useNavigate();
+	const { logIn } = useContext(GlobalContext);
 
 	const onSubmit = data => {
-		console.log(data);
+		logIn(data);
+		navigate('/');
 	};
 
 	return (
