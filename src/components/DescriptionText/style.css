@@ -40,3 +40,43 @@
 	display: flex;
 	align-items: center;
 }
+
+@media (max-width: 1072px) {
+	.descriptionText .textDiv h1 {
+		font-size: 1.5rem;
+	}
+
+	.descriptionText .textDiv .resume {
+		font-size: 1rem;
+	}
+}
+
+@media (max-width: 845px) {
+	.descriptionText .rateDiv {
+		display: none;
+	}
+
+	.descriptionText {
+		width: 100%;
+	}
+
+	.descriptionText .textDiv {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		width: 100% !important;
+	}
+	/* .descriptionText .textDiv h1 {
+		text-align: center;
+	}
+*/
+	.descriptionText .textDiv .resume {
+		width: 80%;
+		text-align: center;
+	}
+
+	/* .descriptionText .textDiv .buttonDiv {
+		flex-direction: column;
+	} */
+}

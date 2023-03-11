@@ -18,3 +18,9 @@
 	margin-top: 50px;
 	align-items: center;
 }
+
+@media (max-width: 1072px) {
+	.serviceContainer .textDiv {
+		width: 60%;
+	}
+}

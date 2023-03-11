@@ -7,3 +7,19 @@
 .description img {
 	max-width: 600px;
 }
+
+@media (max-width: 1072px) {
+	.description img {
+		max-width: 400px;
+	}
+}
+/* 845 */
+
+@media (max-width: 845px) {
+	.description {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-direction: column-reverse;
+	}
+}

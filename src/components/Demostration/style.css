@@ -27,3 +27,19 @@
 .demostration img {
 	max-width: 500px;
 }
+
+@media (max-width: 1072px) {
+	.demostration img {
+		max-width: 400px;
+	}
+
+	.demostration .demostrationTextDiv h3 {
+		color: #fff;
+		font-size: 1.5rem;
+	}
+
+	.demostration .demostrationTextDiv p {
+		color: #ddd;
+		font-size: 1rem;
+	}
+}

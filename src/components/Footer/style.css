@@ -31,3 +31,9 @@
 .footer .fiberDescription .createdBy {
 	margin-top: 20px;
 }
+
+@media (max-width: 920px) {
+	.footer {
+		padding: 5% 3% 5% 3%;
+	}
+}
